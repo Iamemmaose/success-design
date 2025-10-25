@@ -48,26 +48,28 @@
 }
 
 .banner header .logo {
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .banner header .toggle {
-  width: 34px;
-  height: 26px;
-  background: url(images/toggle.png);
-  background-size: cover;
-  cursor: pointer;
+    width: 34px;
+    height: 26px;
+    background: url(images/toggle.png);
+    background-size: cover;
+    cursor: pointer;
 }
 
 .about {
     position: relative;
     width: 100%;
     display: flex;
+    z-index: -1;
+
 }
 
 .about .contentbx {
@@ -83,6 +85,7 @@
     letter-spacing: 1px;
     margin-bottom: 10px;
 }
+
 .about .contentbx p {
     color: white;
     font-size: 1em;
@@ -92,15 +95,19 @@
 .about .imgbx {
     width: 50%;
     background-size: cover;
-    background-position: center;
-    
+    background-position: top;
+
+}
+
+.about .imgbx img {
+    width: 100%;
 }
 
 .services {
     padding: 100px;
-    width:100%;
+    width: 100%;
     background: #12222d;
-    margin-top: -5px;
+    margin-top: -105px;
 }
 
 .textbox {
@@ -108,7 +115,7 @@
     color: white;
 }
 
- .titlebox {
+.titlebox {
     font-size: 2em;
     font-weight: 600;
     letter-spacing: 1px;
@@ -139,7 +146,7 @@
     width: 350px;
     height: 400px;
     margin-top: 20px;
-   
+
 }
 
 .services .container .servicebox img {
@@ -165,7 +172,7 @@
     align-items: center;
 }
 
-.technology  .techtext {
+.technology .techtext {
     max-width: 800px;
     color: white;
 }
@@ -184,7 +191,8 @@
     text-align: center;
 }
 
-.client h2, p {
+.client h2,
+p {
     color: white;
     margin-bottom: 30px;
 }
@@ -241,11 +249,11 @@
 
 .testimonial .container .contentbx h3 {
     text-align: end;
-    color:#3434ca;
+    color: #3434ca;
 }
 
 .contact {
-    padding:100px;
+    padding: 100px;
     background: #162c3b;
     text-align: center;
 }
@@ -271,7 +279,7 @@
 }
 
 .form .inputbx input {
-    width:100%;
+    width: 100%;
     background: transparent;
     border: none;
     outline: none;
@@ -284,12 +292,13 @@
 .form .inputbx input::placeholder {
     color: white;
 }
+
 .form .inputbx input[value=""] {
     color: white;
 }
 
 .form .inputbx textarea {
-    width:100%;
+    width: 100%;
     background: transparent;
     border: none;
     outline: none;
@@ -309,11 +318,11 @@
 }
 
 .form .inputbx input[type="submit"] {
-      width: 150px;
-      background: white;
-      font-size: 16px;
-      font-weight: 300;
-      cursor: pointer;
+    width: 150px;
+    background: white;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
 }
 
 .footer {
@@ -322,21 +331,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .footer ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .footer p {
     margin-bottom: 5px;
 }
 
-.footer ul li {    
+.footer ul li {
     list-style: none;
 }
 
@@ -349,5 +358,248 @@
 .footer ul li a img {
     filter: invert(1);
     max-width: 20px;
-} 
+}
 
+@media (max-width: 600px) {
+    .banner header {
+        padding: 20px 30px;
+    }
+
+    .banner .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .banner .content h2 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about .contentbx {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .about .imgbx {
+        width: 100%;
+    }
+
+    .about .imgbx img {
+        width: 100%;
+    }
+
+    .services {
+        padding: 30px;
+    }
+
+    .services .container .servicebox {
+        width: 250px;
+        height: 243px;
+    }
+
+    .services .container .servicebox img {
+        width: 185px;
+    }
+
+    .technology {
+        flex-direction: column;
+    }
+
+    .technology .techtext {
+        width: 100%;
+        text-align: center;
+    }
+
+    .technology .imgbx {
+        max-width: 200px;
+    }
+
+    .client {
+        padding: 30px;
+    }
+
+    .client .imgbx {
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .testimonial {
+        padding: 30px;
+    }
+
+    .testimonial .container {
+        flex-direction: column;
+    }
+
+    .testimonial .container .contentbx {
+        padding: 24px 26px;
+    }
+
+    .contact {
+        padding: 30px;
+    }
+
+    .about .contentbx {
+        padding: 10px;
+    }
+
+    .form .inputbx textarea {
+        min-height: 100px;
+    }
+
+    .footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .banner header {
+        padding: 30px 50px;
+    }
+
+    .banner .content {
+        width: 500px;
+    }
+
+    .banner .content h2 {
+        margin-bottom: 10px;
+    }
+
+    .about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about .contentbx {
+        width: 100%;
+        padding: 50px;
+    }
+
+    .about .imgbx {
+        width: 100%;
+    }
+
+    .about .imgbx img {
+        width: 100%;
+    }
+
+    .services {
+        padding: 50px;
+    }
+
+    .services .container {
+        justify-content: center;
+    }
+
+    .services .container .servicebox {
+        width: 250px;
+        height: 300px;
+    }
+
+    .technology {
+        flex-direction: column;
+
+    }
+
+    .technology .techtext {
+        width: 100%;
+        text-align: center;
+    }
+
+    .technology .imgbx {
+        max-width: 250px;
+    }
+
+    .client {
+        padding: 50px;
+    }
+
+    .client .imgbx {
+        justify-content: center;
+        gap: 40px;
+        margin-top: 30px;
+    }
+
+    .testimonial {
+        padding: 50px;
+    }
+
+    .testimonial .container .contentbx {
+        padding: 24px 26px;
+    }
+
+    .contact {
+        padding: 30px;
+    }
+
+    .about .contentbx {
+        padding: 10px;
+    }
+
+    .form .inputbx textarea {
+        min-height: 150px;
+    }
+
+    .footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about .contentbx {
+        width: 100%;
+    }
+
+    .about .imgbx {
+        width: 100%;
+    }
+
+    .services .container .servicebox {
+        width: 250px;
+        height: 300px;
+    }
+
+    .services .container {
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+    .client .imgbx {
+        justify-content: center;
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+     .about {
+    flex-direction: column;
+}
+.about .contentbx {
+    width: 100%;
+}
+
+.about .imgbx {
+    width: 100%;
+}
+
+
+}
